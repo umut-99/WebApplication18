@@ -1,0 +1,26 @@
+﻿@using WebApplication18.Entities;
+@model List<SahiplendirilmisHayvan>
+
+
+<h1>Sahiplendirilmiş Hayvanlar</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>İsim</th>
+            <th>Tür</th>
+            <th>Cins</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.İsim</td>
+                <td>@item.Tür</td>
+                <td>@item.Cins</td>
+            </tr>
+        }
+    </tbody>
+</table>

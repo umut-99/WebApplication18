@@ -1,0 +1,24 @@
+﻿@model EditHayvanViewModel
+
+
+<form method="post" action="Edit">
+    <div class="mb-3">
+        <label for="" class="form-label">Id</label>
+        <input type="text" class="form-control" asp-for="Id" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">İsim</label>
+        <input type="text" class="form-control" asp-for="İsim">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Tür</label>
+        <input type="text" class="form-control" asp-for="Tür">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Cins</label>
+        <input type="text" class="form-control" asp-for="Cins">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary" asp-action="Delete" asp-controller="Hayvan">Delete</button>
+</form>

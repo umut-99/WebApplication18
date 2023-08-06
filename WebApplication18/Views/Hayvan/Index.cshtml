@@ -1,0 +1,31 @@
+﻿@using WebApplication18.Entities;
+@model List<Hayvan>
+
+<h1>Hayvanlar</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>İsim</th>
+            <th>Tür</th>
+            <th>Cins</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.İsim</td>
+                <td>@item.Tür</td>
+                <td>@item.Cins</td>
+                <td><a href="Hayvan/Edit/@item.Id">Edit</a></td>
+                <td><a href="Hayvan/Sahiplen/@item.Id">Sahiplen</a></td>
+            </tr>
+        }
+
+    </tbody>
+</table>
